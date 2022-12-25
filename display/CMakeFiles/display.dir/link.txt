@@ -1,0 +1,2 @@
+/opt/homebrew/bin/avr-ar qc libdisplay.a CMakeFiles/display.dir/display.c.obj
+/opt/homebrew/bin/avr-ranlib libdisplay.a

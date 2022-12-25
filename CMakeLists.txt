@@ -65,7 +65,8 @@ add_compile_options(
 )
 
 # Libraries
-add_subdirectory(i2c)
+#add_subdirectory(i2c)
+add_subdirectory(extern)
 add_subdirectory(display)
 
 # Executable

@@ -9,7 +9,7 @@
 #include <inttypes.h>
 #include <compat/twi.h>
 
-#include "kabeltester/i2c.h"
+#include "pfleury/i2cmaster.h"
 
 
 /* define CPU frequency in hz here if not defined in Makefile */

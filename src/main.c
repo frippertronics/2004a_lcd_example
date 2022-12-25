@@ -1,4 +1,3 @@
-#include "kabeltester/interrupt.h"
 #include "kabeltester/display.h"
 
 #include <util/delay.h>

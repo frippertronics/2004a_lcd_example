@@ -1,4 +1,4 @@
-#include "kabeltester/i2c.h"
+#include "i2cmaster.h"
 #include "kabeltester/display.h"
 
 #include "display_commands.h"
@@ -20,10 +20,10 @@
 #define MAX_CHARS      20
 
 /* Quick helper function for single byte transfers */
-static void I2C_WriteByte(uint8_t val) {
-    (void) I2C_Start(SHIFTED_DISPLAY_ADDRESS + I2C_WRITE);
-    (void) I2C_Write(val);
-    I2C_Stop();
+static void i2c_WriteByte(uint8_t val) {
+    (void) i2c_start(SHIFTED_DISPLAY_ADDRESS + I2C_WRITE);
+    (void) i2c_write(val);
+    i2c_stop();
     // Small write delay to prevent garbage data on the display
     _delay_us(DELAY_US);
 }
@@ -32,9 +32,9 @@ static void LCD_ToggleEnable(uint8_t val) {
     // Toggle enable pin on LCD display
     // We cannot do this too quickly or things don't work
     _delay_us(DELAY_US);
-    I2C_WriteByte(val | LCD_ENABLE_BIT);
+    i2c_WriteByte(val | LCD_ENABLE_BIT);
     _delay_us(DELAY_US);
-    I2C_WriteByte(val & ~LCD_ENABLE_BIT);
+    i2c_WriteByte(val & ~LCD_ENABLE_BIT);
     _delay_us(DELAY_US);
 }
 
@@ -43,9 +43,9 @@ static void LCD_SendByte(uint8_t val, int mode) {
     uint8_t high = mode | (val & 0xF0) | LCD_BACKLIGHT;
     uint8_t low = mode | ((val << 4) & 0xF0) | LCD_BACKLIGHT;
 
-    I2C_WriteByte(high);
+    i2c_WriteByte(high);
     LCD_ToggleEnable(high);
-    I2C_WriteByte(low);
+    i2c_WriteByte(low);
     LCD_ToggleEnable(low);
 }
 
@@ -79,7 +79,7 @@ static void LCD_Init(void) {
 
 void DISPLAY_Setup(void)
 {
-    I2C_Init();
+    i2c_init();
     LCD_Init();
 }
 

@@ -1,0 +1,17 @@
+/Users/andersn/Fritid/2004a_lcd_example/CMakeFiles/edit_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/CMakeFiles/rebuild_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/extern/CMakeFiles/i2c.dir
+/Users/andersn/Fritid/2004a_lcd_example/extern/CMakeFiles/edit_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/extern/CMakeFiles/rebuild_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/display/CMakeFiles/display.dir
+/Users/andersn/Fritid/2004a_lcd_example/display/CMakeFiles/edit_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/display/CMakeFiles/rebuild_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/2004a_ldc_example.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/strip.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/hex.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/eeprom.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/upload.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/upload_eeprom.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/fuses.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/edit_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/src/CMakeFiles/rebuild_cache.dir

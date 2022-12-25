@@ -2,6 +2,7 @@
 #define DISPLAY_H
 
 #include <stdbool.h>
+#include <stdint.h>
 
 void DISPLAY_Setup(void);
 void DISPLAY_Clear(void);

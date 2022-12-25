@@ -1,0 +1,3 @@
+/Users/andersn/Fritid/2004a_lcd_example/extern/CMakeFiles/i2c.dir
+/Users/andersn/Fritid/2004a_lcd_example/extern/CMakeFiles/edit_cache.dir
+/Users/andersn/Fritid/2004a_lcd_example/extern/CMakeFiles/rebuild_cache.dir

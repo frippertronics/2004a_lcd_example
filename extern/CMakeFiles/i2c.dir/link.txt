@@ -1,0 +1,2 @@
+/opt/homebrew/bin/avr-ar qc libi2c.a CMakeFiles/i2c.dir/pfleury/twimaster.c.obj
+/opt/homebrew/bin/avr-ranlib libi2c.a

@@ -1,0 +1,3 @@
+[submodule "extern/pfleury"]
+	path = extern/pfleury
+	url = https://github.com/damadmai/pfleury.git
