@@ -19,6 +19,8 @@
 #define MAX_LINES      4
 #define MAX_CHARS      20
 
+static const int line_offsets[] = { 0x00, 0x40, 0x14, 0x54 };
+
 /* Quick helper function for single byte transfers */
 static void i2c_WriteByte(uint8_t val) {
     (void) i2c_start(SHIFTED_DISPLAY_ADDRESS + I2C_WRITE);
@@ -50,7 +52,6 @@ static void LCD_SendByte(uint8_t val, int mode) {
 }
 
 static void LCD_SetCursor(int line, int position) {
-    int line_offsets[] = { 0x00, 0x40, 0x14, 0x54 };
     int val = 0x80 + line_offsets[line] + position;
     LCD_SendByte(val, LCD_COMMAND);
 }
@@ -66,10 +67,8 @@ static void LCD_SendString(const char *s) {
 }
 
 static void LCD_Init(void) {
-    LCD_SendByte(0x03, LCD_COMMAND);
-    LCD_SendByte(0x03, LCD_COMMAND);
-    LCD_SendByte(0x03, LCD_COMMAND);
-    LCD_SendByte(0x02, LCD_COMMAND);
+    LCD_SendByte(LCD_DISPLAYCONTROL, LCD_COMMAND);
+    LCD_SendByte(LCD_RETURNHOME, LCD_COMMAND);
 
     LCD_SendByte(LCD_ENTRYMODESET | LCD_ENTRYLEFT, LCD_COMMAND);
     LCD_SendByte(LCD_FUNCTIONSET | LCD_2LINE, LCD_COMMAND);
